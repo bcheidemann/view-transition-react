@@ -28,7 +28,7 @@ However, in browsers which support the `document.createDocumentTransition` API, 
 
 ## Advanced Usage
 
-![ToDo List Example](assets/example-todo.gif)
+![ToDo List Example](https://raw.githubusercontent.com/bcheidemann/react-document-transition/main/assets/example-todo.gif)
 
 ```tsx
 import { useTransitionState } from 'react-document-transition';
