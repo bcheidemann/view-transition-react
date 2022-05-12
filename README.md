@@ -53,7 +53,7 @@ function Item(item: TodoItem & { toggle: (item: TodoItem) => void}) {
       onClick={toggle}
       className={`item ${item.done ? 'done' : ''}`}
       style={{
-        "page-transition-tag": slug,
+        pageTransitionTag: slug,
       } as React.CSSProperties}
     >
       <h1>{item.name}</h1>
