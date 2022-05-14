@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 import { useTransitionState } from 'react-document-transition';
 
 function Example() {
-  const [count, setCount] = useTransitionStat(0);
+  const [count, setCount] = useTransitionState(0);
 
   return (
     <div>
