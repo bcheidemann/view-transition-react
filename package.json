@@ -8,6 +8,10 @@
   },
   "author": "Ben Heidemann",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcheidemann/react-document-transition.git"
+  },
   "peerDependencies": {
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
