@@ -2,11 +2,14 @@ import { useState, SetStateAction } from "react";
 import { flushSync } from "react-dom";
 
 interface ITransition {
-  start(cb: () => void): Promise<void>;
+  readonly finished: Promise<void>;
+  readonly ready: Promise<void>;
+  readonly startupdateCallbackDone: Promise<void>;
+  skipTransition(): void;
 }
 
 interface IDocument extends Document {
-  createDocumentTransition?: () => ITransition;
+  startViewTransition?: (cb: () => void) => ITransition;
 }
 
 export type Dispatch<T> = (value: SetStateAction<T>) => Promise<void>;
@@ -21,16 +24,15 @@ export function useTransitionState<T>(initialState: T): [T, Dispatch<T>] {
     : async (value: SetStateAction<T>) => {
       const _document = document as IDocument;
 
-      if (!_document.createDocumentTransition) {
+      if (!_document.startViewTransition) {
         return setStateInternal(value);
       }
-      const transition = _document.createDocumentTransition();
       flushSync(() => void(0));
-      await transition.start(() => {
+      await _document.startViewTransition(() => {
         flushSync(() => {
           setStateInternal(value);
         });
-      });
+      }).startupdateCallbackDone;
     };
 
   return [state, setState];
