@@ -1,6 +1,6 @@
 # React Document Transitions
 
-This package enables creating complex state transitions by using simple hooks. It uses `document.createDocumentTransition` from the [page transition API](https://github.com/WICG/shared-element-transitions/blob/main/developer-guide.md). This API is currently only available in [Chrome Canary](https://www.google.com/chrome/canary/) and requires the `chrome://flags/#document-transition` flag to be enabled.
+This package enables creating complex state transitions by using simple hooks. It uses `document.createDocumentTransition` from the [view transition API](https://developer.chrome.com/docs/web-platform/view-transitions/). This API is currently only available in [Chrome](https://www.google.com/chrome/). If the view transition API is not available then the `useTransitionState` hook will function almost exactly the same as the `useState` hook.
 
 ## Basic Usage
 
@@ -24,7 +24,7 @@ function Example() {
 }
 ```
 
-However, in browsers which support the `document.createDocumentTransition` API, any state changes will be animated.
+However, in browsers which support the `document.startViewTransition` API, any state changes will be animated.
 
 ## Advanced Usage
 
