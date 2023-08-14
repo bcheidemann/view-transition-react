@@ -1,4 +1,5 @@
 assets
+examples
 node_modules
 src
 .npmignore
