@@ -2,6 +2,10 @@
 
 This package enables creating complex state transitions by using simple hooks. It uses `document.createDocumentTransition` from the [view transition API](https://developer.chrome.com/docs/web-platform/view-transitions/). This API is currently only available in [Chrome](https://www.google.com/chrome/). If the view transition API is not available then the `useTransitionState` hook will function almost exactly the same as the `useState` hook.
 
+## Example
+
+Visit [https://react-document-transition.vercel.app/](https://react-document-transition.vercel.app/) in the Chrome browser to see react-document-transition in action.
+
 ## Basic Usage
 
 The `useTransitionState` hook is a thin wrapper around the `useState` hook and exposes a nearly identical API.
