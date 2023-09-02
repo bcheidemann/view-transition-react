@@ -12,26 +12,49 @@ function App() {
           display: 'flex',
           padding: '1em',
           justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
-        <button onClick={() => setStep((current) => {
-          if (current === 0) {
-            return 5
-          }
-          else {
-            return current - 1
-          }
-        })}>
+        <button
+          style={{
+            width: '8em',
+          }}
+          onClick={() => setStep((current) => {
+            if (current === 0) {
+              return 5
+            }
+            else {
+              return current - 1
+            }
+          })}
+        >
           previous
         </button>
-        <button onClick={() => setStep((current) => {
-          if (current === 5) {
-            return 0
-          }
-          else {
-            return current + 1
-          }
-        })}>
+        <a
+          href="https://github.com/bcheidemann/view-transition-react/blob/main/examples/src/App.tsx"
+          target="_blank"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+          }}
+        >
+          <img src="/github-mark.svg" alt="github" width="16px" height="16px" />
+          view source
+        </a>
+        <button
+          style={{
+            width: '8em',
+          }}
+          onClick={() => setStep((current) => {
+            if (current === 5) {
+              return 0
+            }
+            else {
+              return current + 1
+            }
+          })}
+        >
           next
         </button>
       </div>
