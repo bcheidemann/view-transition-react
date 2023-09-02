@@ -1,10 +1,10 @@
-# React Document Transitions
+# View Transition React
 
-This package enables creating complex state transitions by using simple hooks. It uses `document.createDocumentTransition` from the [view transition API](https://developer.chrome.com/docs/web-platform/view-transitions/). This API is currently only available in [Chrome](https://www.google.com/chrome/). If the view transition API is not available then the `useTransitionState` hook will function almost exactly the same as the `useState` hook.
+This package enables creating complex state transitions by using simple hooks. It uses `document.startViewTransition` from the [view transition API](https://developer.chrome.com/docs/web-platform/view-transitions/). This API is currently only available in [Chrome](https://www.google.com/chrome/). If the view transition API is not available then the `useTransitionState` hook will function almost exactly the same as the `useState` hook.
 
 ## Example
 
-Visit [https://react-document-transition.vercel.app/](https://react-document-transition.vercel.app/) in the Chrome browser to see react-document-transition in action.
+Visit [https://view-transition-react.vercel.app/](https://view-transition-react.vercel.app/) in the Chrome browser to see `view-transition-react` in action.
 
 ## Basic Usage
 
@@ -12,7 +12,7 @@ The `useTransitionState` hook is a thin wrapper around the `useState` hook and e
 
 ```tsx
 import React, { useState } from 'react';
-import { useTransitionState } from 'react-document-transition';
+import { useTransitionState } from 'view-transition-react';
 
 function Example() {
   const [count, setCount] = useTransitionState(0);
@@ -32,10 +32,10 @@ However, in browsers which support the `document.startViewTransition` API, any s
 
 ## Advanced Usage
 
-![ToDo List Example](https://raw.githubusercontent.com/bcheidemann/react-document-transition/main/assets/example-todo.gif)
+![ToDo List Example](https://raw.githubusercontent.com/bcheidemann/view-transition-react/main/assets/example-todo.gif)
 
 ```tsx
-import { useTransitionState } from 'react-document-transition';
+import { useTransitionState } from 'view-transition-react';
 
 type TodoItem = {
   name: string;

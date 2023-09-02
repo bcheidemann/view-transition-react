@@ -1,4 +1,4 @@
-import { useTransitionState } from 'react-document-transition'
+import { useTransitionState } from 'view-transition-react'
 
 function App() {
   const [step, setStep] = useTransitionState(0)

@@ -1,5 +1,5 @@
 {
-  "name": "react-document-transition",
+  "name": "view-transition-react",
   "version": "2.0.1",
   "description": "React hooks for the document transition API",
   "main": "./dist/index.js",
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bcheidemann/react-document-transition.git"
+    "url": "https://github.com/bcheidemann/view-transition-react.git"
   },
   "peerDependencies": {
     "react": "^16.0.0 || ^17.0.0 || ^18.0.0",

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-document-transition": "^2.0.0",
+    "view-transition-react": "^2.0.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
