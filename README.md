@@ -1,10 +1,12 @@
-# React Document Transitions
+# React Document Transitions (DEPRECATED)
 
-This package enables creating complex state transitions by using simple hooks. It uses `document.createDocumentTransition` from the [view transition API](https://developer.chrome.com/docs/web-platform/view-transitions/). This API is currently only available in [Chrome](https://www.google.com/chrome/). If the view transition API is not available then the `useTransitionState` hook will function almost exactly the same as the `useState` hook.
+**WARNING: This package is deprecated. Please use [view-transition-react](https://www.npmjs.com/package/view-transition-react) instead.**
+
+This package enables creating complex state transitions by using simple hooks. It uses `document.startViewTransition` from the [view transition API](https://developer.chrome.com/docs/web-platform/view-transitions/). This API is currently only available in [Chrome](https://www.google.com/chrome/). If the view transition API is not available then the `useTransitionState` hook will function almost exactly the same as the `useState` hook.
 
 ## Example
 
-Visit [https://react-document-transition.vercel.app/](https://react-document-transition.vercel.app/) in the Chrome browser to see react-document-transition in action.
+Visit [https://view-transition-react.vercel.app/](https://view-transition-react.vercel.app/) in the Chrome browser to see react-document-transition in action.
 
 ## Basic Usage
 

@@ -1,6 +1,8 @@
 import { useState, SetStateAction } from "react";
 import { flushSync } from "react-dom";
 
+console.warn("[react-document-transition] This package is deprecated. Please use view-transition-react instead.");
+
 interface ITransition {
   readonly finished: Promise<void>;
   readonly ready: Promise<void>;
